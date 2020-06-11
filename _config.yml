@@ -29,6 +29,7 @@ github_username:  idavidhf
 
 # Build settings
 theme: minima
+#theme: jekyll-theme-consulting
 plugins:
   - jekyll-feed
 
