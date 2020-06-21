@@ -1,12 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Home
----
 
-## This is a demo text for the home file.
+---
+## A simple personal website
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam dignissim ligula, quis tempor arcu sagittis at. Cras malesuada mauris id sodales consequat. Proin nunc nisi, bibendum eu iaculis vel, ornare non orci. Vivamus egestas pretium nibh in luctus. Quisque malesuada lorem sed bibendum finibus. Cras mollis ex sagittis nulla pellentesque, quis facilisis lectus eleifend. Suspendisse porta sem viverra ornare pellentesque. Integer euismod ornare efficitur. Nulla molestie congue sem.
 
@@ -17,4 +14,3 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
 Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eu pharetra libero, sit amet commodo felis. Sed condimentum velit mi, quis sagittis nunc maximus vel. Etiam in enim et est convallis facilisis et nec orci. Vestibulum a mauris vitae ipsum blandit suscipit. In malesuada augue in orci fermentum, ac egestas magna volutpat. Curabitur suscipit sodales volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a cursus urna.
 
 Praesent pharetra magna eget neque tempus, vel rhoncus ante aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin volutpat mauris mi, vulputate egestas dui viverra quis. Integer a mi quam. Aenean sollicitudin lacus at nulla porta lacinia. Nunc scelerisque neque a fermentum eleifend. Sed vel viverra tortor. Sed lobortis a tortor vitae aliquet. Suspendisse suscipit sed ipsum ut mattis. Phasellus quis efficitur ipsum. Nullam eu ipsum in quam maximus mattis. Suspendisse elementum orci turpis, vitae aliquet libero dignissim in. Phasellus convallis euismod mauris, non finibus velit tincidunt id. Pellentesque orci turpis, imperdiet sit amet facilisis vitae, pharetra vel risus.
-
