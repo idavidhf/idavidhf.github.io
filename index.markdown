@@ -11,6 +11,12 @@ This is a first test from •*DAVID•*
 
 como assim?
 
+
+**how to create an HTML table?**
+
+
+
+
 Lorem tempus felis, ut maximus nibh consequat id. Morbi tempor hendrerit congue. Vestibulum nec magna velit. Nulla varius gravida magna, ullamcorper accumsan ante convallis vel. Nam vitae convallis erat, vel aliquet tellus. Maecenas eget sem a mi faucibus tincidunt in a massa. Duis vel interdum tellus. Sed sed libero finibus, accumsan dui a, feugiat est. Nam quam tortor, posuere id augue dictum, fermentum scelerisque magna. Donec nec aliquet orci, et feugiat libero.
 
 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin viverra metus quis risus vehicula, ut faucibus neque lacinia. Donec sed turpis lobortis, facilisis elit eleifend, blandit neque. Etiam at sapien sed leo vehicula molestie. Nam sodales est porta urna vestibulum accumsan. Fusce fringilla rutrum libero mattis blandit. Praesent porttitor quis nunc nec ornare. Etiam porta facilisis pharetra. Donec non feugiat sapien. Praesent aliquam vulputate mauris nec blandit.
