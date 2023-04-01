@@ -1,8 +1,8 @@
 ---
-layout: home
 title: Home
-
+layout: home
 ---
+
 ## A simple personal website
 
 ![](/uploads/3117789f-e6e2-4179-8045-2d37cf7474f8.jpeg)
