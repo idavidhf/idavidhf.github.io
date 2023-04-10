@@ -1,7 +1,0 @@
-site_name: Irving D. Hernández
-site_url: https://idavidhf.github.io/
-nav:
-    - 'index.md'
-    - 'COV816.md'
-theme:
-    name: readthedocs
