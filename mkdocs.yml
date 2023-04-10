@@ -3,4 +3,5 @@ site_url: https://idavidhf.github.io/
 nav:
     - 'index.md'
     - 'COV816.md'
-theme: readthedocs
+theme:
+    name: readthedocs
