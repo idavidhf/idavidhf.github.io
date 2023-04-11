@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Bloco 01 - Irving D. Hernandez</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bloco 01";
+        var mkdocs_page_input_path = "COV 816/01_B01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Irving D. Hernandez
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">COV 816</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../ementa/">Ementa</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Bloco 01</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#definition-of-a-digital-image">Definition of a Digital Image</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#properties-of-a-digitized-image">Properties of a Digitized Image</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#image-resolution">Image Resolution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-definition">Image Definition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#number-of-planes">Number of Planes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-types">Image Types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grayscale-images">Grayscale Images</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#color-images">Color Images</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#complex-images">Complex Images</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Irving D. Hernandez</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>COV 816 &raquo;</li>
+      <li>Bloco 01</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="basics-of-images">BASICS OF IMAGES</h3>
+<h4 id="definition-of-a-digital-image">Definition of a Digital Image</h4>
+<p>An image is a two-dimensional array of values representing light intensity. For the purposes of image processing, the term image refers to a digital image. An image is a function of the light intensity:</p>
+<p>
+<script type="math/tex; mode=display">f(x, y)</script>
+</p>
+<p>where <script type="math/tex">f</script> is the brightness of the point \((x, y\)), and <script type="math/tex">x</script> and <script type="math/tex">y</script> represent the spatial coordinates of a picture element (abbreviated pixel).</p>
+<p>By convention, the spatial reference of the pixel with the coordinates (0, 0) is located at the top, left corner of the image. Notice in Figure 1-1 that the value of x increases moving from left to right, and the value of y increases from top to bottom.</p>
+<p>[FIGURE WILL BE HERE]
+Figure 1-1. Spatial Reference of the (0, 0) Pixel.</p>
+<p>In digital image processing, an imaging sensor converts an image into a discrete number of pixels. The imaging sensor assigns to each pixel a numeric location and a gray level or color value that specifies the brightness or color of the pixel.</p>
+<h4 id="properties-of-a-digitized-image">Properties of a Digitized Image</h4>
+<p>A digitized image has three basic properties: <strong>resolution</strong>, <strong>definition</strong>, and <strong>number of planes</strong>.</p>
+<h5 id="image-resolution">Image Resolution</h5>
+<p>The <em>spatial resolution</em> of an image is its number of rows and columns of pixels. An image composed of m columns and n rows has a resolution of \(m\times n\). This image has m pixels along its horizontal axis and n pixels along its vertical axis.</p>
+<h5 id="image-definition">Image Definition</h5>
+<p>The <em>definition</em> of an image indicates the number of shades that you can see in the image. The bit depth of an image is the number of bits used to encode the value of a pixel. For a given bit depth of \(n\), the image has an image definition of \(2^n\), meaning a pixel can have \(2^n\) different values. For example, if \(n\) equals 8-bits, a pixel can take 256 different values ranging from
+0 to 255. If \(n\) equals 16 bits, a pixel can take 65,536 different values ranging from 0 to 65,535 or from –32,768 to 32,767.</p>
+<p>The manner in which you encode your image depends on the nature of the image acquisition device, the type of image processing you need to use, and the type of analysis you need to perform. For example, 8-bit encoding is sufficient if you need to obtain the shape information of objects in an image. However, if you need to precisely measure the light intensity of an image or region in an image, you must use 16-bit or floating-point encoding.</p>
+<blockquote>
+<p>Use color encoded images when your machine vision or image processing application depends on the color content of the objects you are inspecting or analyzing.</p>
+</blockquote>
+<h5 id="number-of-planes">Number of Planes</h5>
+<p>The number of planes in an image corresponds to the number of arrays of pixels that compose the image. A grayscale or pseudo-color image is composed of one plane, while a true-color image is composed of three planes—one each for the red component, blue component, and green component.</p>
+<p>In true-color images, the color component intensities of a pixel are coded into three different values. The color image is the combination of three arrays of pixels corresponding to the <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> components in an RGB image. HSL images are defined by their <strong>hue</strong>, <strong>saturation</strong>, and <strong>luminance</strong> values.</p>
+<h5 id="image-types">Image Types</h5>
+<p>We can talk about three main types of images: <strong>grayscale, color, and complex images</strong>.</p>
+<h5 id="grayscale-images">Grayscale Images</h5>
+<p>A <em>grayscale image</em> is composed of a single plane of pixels. Each pixel is encoded using one of the following single numbers:</p>
+<ul>
+<li>An 8-bit unsigned integer representing grayscale values between 0 and 255.</li>
+<li>A 16-bit signed integer representing grayscale values between –32,768 and +32,767.</li>
+<li>A single precision floating point number (encoded using four bytes) representing grayscale values ranging from \(-\infty\) to \(+\infty\).</li>
+</ul>
+<h5 id="color-images">Color Images</h5>
+<p>A <em>color image</em> is encoded in memory as either an RGB or HSL image. Color image pixels are a composite of four values. RGB images store color information using 8 bits each for the <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> planes. HSL images store color information using 8 bits each for <strong>hue</strong>, <strong>saturation</strong>, and <strong>luminance</strong>. In all of the color models, an additional 8-bit value goes unused. This representation is known as 4\(\times\)8-bit or 32-bit encoding.</p>
+<h5 id="complex-images">Complex Images</h5>
+<p>A <em>complex image</em> contains the frequency information of a grayscale image. Create a complex image by applying a Fast Fourier transform (FFT) to a grayscale image. When you transform a grayscale image into a complex image, you can perform frequency domain operations on the image.</p>
+<p>Each pixel in a complex image is encoded as two single-precision floating-point values, which represent the real and imaginary components of the complex pixel. You can extract the following four components from a complex image: <strong>the real part</strong>, <strong>imaginary part</strong>, <strong>magnitude</strong>, and <strong>phase</strong>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ementa/" class="btn btn-neutral float-left" title="Ementa"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ementa/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
