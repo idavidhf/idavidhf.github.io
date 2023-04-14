@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Bloco 01 - Basic Concepts - Irving D. Hernandez</title>
+    <title>Unit 01 - Basic Concepts - Irving D. Hernandez</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Bloco 01 - Basic Concepts";
+        var mkdocs_page_name = "Unit 01 - Basic Concepts";
         var mkdocs_page_input_path = "COV 816/01_B01.md";
         var mkdocs_page_url = null;
       </script>
@@ -48,7 +48,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../ementa/">Class Syllabus</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Bloco 01 - Basic Concepts</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Unit 01 - Basic Concepts</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#11-definition-of-a-digital-image">1.1 Definition of a Digital Image</a>
     </li>
@@ -92,7 +92,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../02_B02/">Bloco 02 - Image Aquisition</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../02_B02/">Unit 02 - Image Aquisition</a>
                   </li>
               </ul>
       </div>
@@ -110,7 +110,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>COV 816 - Image Processing &raquo;</li>
-      <li>Bloco 01 - Basic Concepts</li>
+      <li>Unit 01 - Basic Concepts</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -127,8 +127,8 @@
 </p>
 <p>where <script type="math/tex">f</script> is the brightness of the point \((x, y\)), and <script type="math/tex">x</script> and <script type="math/tex">y</script> represent the spatial coordinates of a picture element (abbreviated pixel).</p>
 <p>By convention, the spatial reference of the pixel with the coordinates (0, 0) is located at the top, left corner of the image. Notice in Figure 1-1 that the value of x increases moving from left to right, and the value of y increases from top to bottom.</p>
-<p>[FIGURE WILL BE HERE]
-Figure 1-1. Spatial Reference of the (0, 0) Pixel.</p>
+<p><img alt="&quot;Figure 1-1&quot;" src="https://dsm01pap005files.storage.live.com/y4mXlJDaOYXOaGO12Y3-45yQqMpz_c57jupJH7AHr1U7V7yzHffLFwgfDYqRY0yny2ScOpsVorY7pBR92I_2SqwiCrJCRP8n_MLSC9ixB4SYpjVFc7HjAGmHW1up2pGved8BB2SqfCZdyMFiCNB6p41MJkhRJT6ZEc1QiCV8DINmwgay3Aq7siFee2_HVRQi6vv?width=660&amp;height=144&amp;cropmode=none" title="Spatial Reference of the (0, 0) Pixel" />
+<strong>Figure 1-1</strong>. Spatial Reference of the (0, 0) Pixel.</p>
 <p>In digital image processing, an imaging sensor converts an image into a discrete number of pixels. The imaging sensor assigns to each pixel a numeric location and a gray level or color value that specifies the brightness or color of the pixel.</p>
 <h4 id="12-properties-of-a-digitized-image">1.2 Properties of a Digitized Image</h4>
 <p>A digitized image has three basic properties: <strong>resolution</strong>, <strong>definition</strong>, and <strong>number of planes</strong>.</p>
@@ -201,8 +201,8 @@ to specify color. The following is a list of common color spaces.</p>
 <h5 id="152-the-rgb-color-space">1.5.2 The RGB Color Space</h5>
 <p>The RGB color space is the most commonly used color space. The human eye receives color information in separate <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> components through cones, the color receptors present in the human eye. These three colors are known as additive primary colors. In an additive color system, the human brain processes the three primary light sources and combines them to compose a single color <strong>image</strong>. The three primary color components can combine to reproduce almost all other possible colors.</p>
 <p>You can visualize the RGB space as a 3-dimensional cube with red, green, and blue at the corners of each axis, as shown in Figure 1.5-1. Black is at the origin, while white is at the opposite corner of the cube. Each side of the cube has a value between 0 and 1. Along each axis of the RGB cube, the colors range from no contribution of that component to a fully saturated color. Any point, or color, within the cube is specified by three numbers: an <strong>R</strong>, <strong>G</strong>, <strong>B</strong> triple. The diagonal line of the cube from black \((0, 0, 0)\) to white \((1, 1, 1\)) represents all the grayscale values or where all of the red, green, and blue components are equal. Different computer hardware and software combinations use different ranges for the colors. Common combinations are 0–255 and 0–65,535 for each component. To map color values within these ranges to values in the RGB cube, divide the color values by the maximum value that the range can take.</p>
-<p>[A FIGURE WILL BE HERE]
-Figure 1.5-1: RGB Cube.</p>
+<p><img alt="&quot;RGB&quot;" src="https://dsm01pap005files.storage.live.com/y4m8KZpsxjrtlhMUVM4UVUzB0beyom9J2ovzRirjYJWEDu99sMqFspePWzaItPikv4Ymva7oipzQ6ZggZDhmLnvYBAmFeyzL665zTayNz7_k5ewQ06Q9Z9EjE_b2DZQu8WjMrgnTWDHU413VxP5oNs4M45WpiXiZ-fA6jgqF2eznXMn9vOTmkx_cDaWPsZXkgzl?width=660&amp;height=639&amp;cropmode=none" title="RGB Cube" /></p>
+<p><strong>Figure 1.5-1.</strong> RGB Cube.</p>
 <p>The RGB color space lies within the perceptual space of humans. In other words, the RGB cube represents fewer colors than we can see.</p>
 <p>The RGB space simplifies the design of computer monitors, but it is not ideal for all applications. In the RGB color space, the red, green, and blue color components are all necessary to describe a color. Therefore, RGB is not as intuitive as other color spaces. The HSL color space describes color using only the hue component, which makes HSL the best choice for many image processing applications, such as color matching.</p>
 <h5 id="153-hsl-color-space">1.5.3 HSL Color Space</h5>
@@ -218,7 +218,7 @@ Figure 1.5-1: RGB Cube.</p>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../ementa/" class="btn btn-neutral float-left" title="Class Syllabus"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../02_B02/" class="btn btn-neutral float-right" title="Bloco 02 - Image Aquisition">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../02_B02/" class="btn btn-neutral float-right" title="Unit 02 - Image Aquisition">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

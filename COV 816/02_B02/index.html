@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Bloco 02 - Image Aquisition - Irving D. Hernandez</title>
+    <title>Unit 02 - Image Aquisition - Irving D. Hernandez</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Bloco 02 - Image Aquisition";
+        var mkdocs_page_name = "Unit 02 - Image Aquisition";
         var mkdocs_page_input_path = "COV 816/02_B02.md";
         var mkdocs_page_url = null;
       </script>
@@ -48,13 +48,35 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../ementa/">Class Syllabus</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../01_B01/">Bloco 01 - Basic Concepts</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../01_B01/">Unit 01 - Basic Concepts</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Bloco 02 - Image Aquisition</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Unit 02 - Image Aquisition</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#21-system-setup">2.1 System Setup</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#22-calibration">2.2 Calibration</a>
+    <li class="toctree-l2"><a class="reference internal" href="#22-acquiring-quality-images">2.2 Acquiring Quality Images</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#221-resolution">2.2.1 Resolution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#222-field-of-view">2.2.2 Field of View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#223-sensor-size-and-number-of-pixels-in-the-sensor">2.2.3 Sensor Size and Number of Pixels in the Sensor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#224-lens-focal-length">2.2.4 Lens Focal Length</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#225-contrast">2.2.5 Contrast</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#226-depth-of-field">2.2.6 Depth of Field</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#227-perspective">2.2.7 Perspective</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#23-calibration">2.3 Calibration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#231-basics">2.3.1 Basics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#24-references">2.4 References</a>
     </li>
     </ul>
                   </li>
@@ -74,7 +96,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>COV 816 - Image Processing &raquo;</li>
-      <li>Bloco 02 - Image Aquisition</li>
+      <li>Unit 02 - Image Aquisition</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -86,14 +108,98 @@
                 <h3 id="2-image-acquisition">2 IMAGE ACQUISITION</h3>
 <p>This block section addressess how to set up an imaging system and calibrate the imaging setup so that you can convert pixel-coordinates to real-world coordinates. Converting pixel-coordinates to real-world coordinates is useful when you need to make accurate measurements from inspection images using real-world units</p>
 <h4 id="21-system-setup">2.1 System Setup</h4>
-<p>[TO BE FILLED]</p>
-<h4 id="22-calibration">2.2 Calibration</h4>
-<p>[TO BE FILLED]</p>
+<p>Before acquire, analyze, and process images, is necessary to set up an imaging system. Five factors comprise a imaging system: field of view, working distance, resolution, depth of field, and sensor size. Following figure illustrates these concepts:</p>
+<p><img alt="&quot;Acquisition System&quot;" src="https://dsm01pap005files.storage.live.com/y4mLW8VTpALzQ-gs_u3vVPgcOx8vmLeEnFsPKuwosseEyeBLa6w8uA-rHD0j9hnJG1LRXADOhwDsG-4kMYW3DvP3VHa_4UwqbKvKSSyc2ZmW6YNwEXW2J91EMOcnXquakfVoiE7GOCbyr5-RrUcP_hQvLo-KGjTr7MUU_COJSIX-yExxuJO1VjjtUSM-HUBTeFi?width=904&amp;height=1024&amp;cropmode=none" title="Fundamental Parameters of an Imaging System" /></p>
+<p><strong>Figure 2.1-1.</strong> Fundamental Parameters of an Imaging System.</p>
+<ul>
+<li><strong>Resolution</strong>: The smallest feature size on your object that the imaging system can distinguish.</li>
+<li><strong>Pixel resolution</strong>: The minimum number of pixels needed to represent the object under inspection.</li>
+<li><strong>Field of view</strong>: The area of the object under inspection that the camera can acquire.</li>
+<li><strong>Working distance</strong>: The distance from the front of the camera lens to the object under inspection.</li>
+<li><strong>Sensor size</strong>: The size of a sensor’s active area, typically defined by the sensor's horizontal dimension.</li>
+<li><strong>Depth of field</strong>: The maximum object depth that remains in focus.</li>
+</ul>
+<h4 id="22-acquiring-quality-images">2.2 Acquiring Quality Images</h4>
+<p>The manner in which you set up your system depends on the type of analysis and processing you need to do. Your imaging system should produce images with high enough quality so that you can extract the information you need from the images. Five factors contribute to overall image quality: resolution, contrast, depth of field, perspective, and distortion.</p>
+<h5 id="221-resolution">2.2.1 Resolution</h5>
+<p>There are two kinds of resolution to consider when setting up your imaging system: pixel resolution and resolution. Pixel resolution refers to the minimum number of pixels you need to represent the object under inspection. You can determine the pixel resolution you need by the smallest feature you need to inspect. Try to have at least two pixels represent the smallest feature. You can use the following equation to determine the minimum pixel resolution required by your imaging system:</p>
+<p>
+<script type="math/tex; mode=display">\frac{\text{length of object's longest axis}}{\text{size of object's smallest feature}}\times 2</script>
+</p>
+<p>If the object does not occupy the entire field of view, the image size will be greater than the pixel resolution.</p>
+<p>Resolution indicates the amount of object detail that the imaging system can reproduce. Images with low resolution lack detail and often appear blurry. Three factors contribute to the resolution of your imaging system: field of view, the camera sensor size, and number of pixels in the sensor. When you know these three factors, you can determine the focal length of your camera lens.</p>
+<h5 id="222-field-of-view">2.2.2 Field of View</h5>
+<p>The field of view is the area of the object under inspection that the camera can acquire. Figure 2.2-1 describes the relationship between pixel resolution and the field of view.</p>
+<p><img alt="&quot;FOV&quot;" src="https://dsm01pap005files.storage.live.com/y4mBZSRQ03-16Nbde72NtRM--YANogmVMUPMJSQKTpWztmzcxTYto8okb9r1SzCAfXYHY4QNVJ6AbpEbkj8njktVZWMzD277n1nJNwkin_SCvhCDHFt_odbamJ3o53bRuk4WL6ML09kVXmvo8v2Ry1DKjKLYoPkBwi0-GQ703Msac0mAa-wFLgg3Kp1TXNUhB8S?width=1024&amp;height=382&amp;cropmode=none" title="Field of View" /></p>
+<p><strong>Figure 2.2-1.</strong> Relationship between Pixel Resolution and Field of View.</p>
+<p>Figure 2.2-1a shows an object that occupies the field of view. Figure 2.2-1b shows an object that occupies less space than the field of view. If \(w\) is the size of the smallest feature in the \(x\) direction and \(h\) is the size of the smallest feature in the \(y\) direction, the minimum \(x\) pixel resolution is:</p>
+<p>
+<script type="math/tex; mode=display">\frac{w_{fov}}{w}\times 2</script>
+</p>
+<p>and the minimum \(y\) pixel resolution is:</p>
+<p>
+<script type="math/tex; mode=display">\frac{h_{fov}}{h}\times 2</script>
+</p>
+<p>Choose the larger pixel resolution of the two for your imaging application.</p>
+<h5 id="223-sensor-size-and-number-of-pixels-in-the-sensor">2.2.3 Sensor Size and Number of Pixels in the Sensor</h5>
+<p>The camera sensor size is important in determining your field of view, which is a key element in determining your minimum resolution requirement. The sensor’s diagonal length specifies the size of the sensor’s active area. The number of pixels in your sensor should be greater than or equal to the pixel resolution. Choose a camera with a sensor that satisfies your minimum resolution requirement.</p>
+<h5 id="224-lens-focal-length">2.2.4 Lens Focal Length</h5>
+<p>When you determine the field of view and appropriate sensor size, you can decide which type of camera lens meets your imaging needs. A lens is defined primarily by its focal length. The relationship between the lens, field of view, and sensor size is as follows:</p>
+<p>
+<script type="math/tex; mode=display">f=\frac{\text{sensor size} \times \text{working distance}}{\text{field of view}}</script>
+</p>
+<p>If you cannot change the working distance, you are limited in choosing a focal length for your lens. If you have a fixed working distance and your focal length is short, your images may appear distorted. However, if you have the flexibility to change your working distance, modify the distance so that you can select a lens with the appropriate focal length and minimize distortion.</p>
+<h5 id="225-contrast">2.2.5 Contrast</h5>
+<p>Resolution and contrast are closely related factors contributing to image quality. Contrast defines the differences in intensity values between the object under inspection and the background. Your imaging system should have enough contrast to distinguish objects from the background. Proper lighting techniques can enhance the contrast of your system.</p>
+<h5 id="226-depth-of-field">2.2.6 Depth of Field</h5>
+<p>The depth of field of a lens is its ability to keep objects of varying heights in focus. If you need to inspect objects with various heights, chose a lens that can maintain the image quality you need as the objects move closer to and further from the lens.</p>
+<h5 id="227-perspective">2.2.7 Perspective</h5>
+<p>Perspective errors often occur when the camera axis is not perpendicular to the object you are inspecting. Figure 3-3a shows an ideal camera position. Figure 3-3b shows a camera imaging an object from an angle.</p>
+<p><img alt="&quot;perspective&quot;" src="https://dsm01pap005files.storage.live.com/y4myUyXv-jYm-mkSXzF3RXtlKgwuLs1eHsxomi2rcTYeb0M9fxR5Oix_vU7BOahUC532k0cvLY6lOZnfxIPNE772tVa2eZkQjlK_T_5W6Z8t6fUki3omdln450mgNBhpi-wFjAGu7cKmkQx28m0vlJr4LoN2dS7wdDL_k9xTtUf9Co_qwUlwNrQwfn5YcVxGSMb?width=1024&amp;height=493&amp;cropmode=none" title="Perspective of camera" /></p>
+<p><strong>Figure 2.2-2.</strong> Camera Angle Relative to the Object of Interest.</p>
+<h4 id="23-calibration">2.3 Calibration</h4>
+<blockquote>
+<p><strong>What is camera calibration?</strong></p>
+</blockquote>
+<p>The process of estimating the parameters of a camera is called camera calibration.</p>
+<p>This means we have all the information (parameters or coefficients) about the camera required to determine an accurate relationship between a 3D point in the real world and its corresponding 2D projection (pixel) in the image captured by that calibrated camera.</p>
+<p>Typically this means recovering two kinds of parameters</p>
+<ul>
+<li><strong>Internal parameters</strong> of the camera/lens system. E.g. focal length, optical center, and radial distortion coefficients of the lens.</li>
+<li><strong>External parameters</strong> : This refers to the orientation (rotation and translation) of the camera with respect to some world coordinate system.</li>
+</ul>
+<h4 id="231-basics">2.3.1 Basics</h4>
+<p>Some pinhole cameras introduce significant distortion to images. Two major kinds of distortion are radial distortion and tangential distortion.</p>
+<p>Radial distortion causes straight lines to appear curved. Radial distortion becomes larger the farther points are from the center of the image. For example, one image is shown below in which two edges of a chess board are marked with red lines. But, you can see that the border of the chess board is not a straight line and doesn't match with the red line. All the expected straight lines are bulged out.</p>
+<p><img alt="&quot;RadDis&quot;" src="https://dsm01pap005files.storage.live.com/y4m-zpkfoW05pmiDV-27mtulWpHPNZpz2M2vWdEf_euCZfl6saQiD_YXjYOsqlykrBtc-iuEBbAim6aPIdKzprYqM2YpQNJx9D0qQhK67nDPje5BkIb4BP_RTNKzSdA6NSwql0FLDODOJ__rhWKROIkA4PDaF-C_WnCSGBATeMFgyuQ7AACcVrcsGIQAF_aDOAd?width=398&amp;height=454&amp;cropmode=none" title="Radial Distortion" /></p>
+<p><strong>Figure 2.3-1.</strong> Radial Distortion.</p>
+<p>Radial distortion can be represented as follows:</p>
+<p>
+<script type="math/tex; mode=display">x_{distorted} = x( 1 + k_1 r^2 + k_2 r^4 + k_3 r^6) \\ y_{distorted} = y( 1 + k_1 r^2 + k_2 r^4 + k_3 r^6)</script>
+</p>
+<p>Similarly, tangential distortion occurs because the image-taking lense is not aligned perfectly parallel to the imaging plane. So, some areas in the image may look nearer than expected. The amount of tangential distortion can be represented as below:
+<script type="math/tex; mode=display">x_{distorted} = x + [ 2p_1xy + p_2(r^2+2x^2)] \\ y_{distorted} = y + [ p_1(r^2+ 2y^2)+ 2p_2xy]</script>
+</p>
+<p>In short, we need to find five parameters, known as distortion coefficients given by:</p>
+<p>
+<script type="math/tex; mode=display">Distortion \; coefficients=(k_1 \hspace{10pt} k_2 \hspace{10pt} p_1 \hspace{10pt} p_2 \hspace{10pt} k_3)</script>
+</p>
+<p>In addition to this, we need to some other information, like the intrinsic and extrinsic parameters of the camera. Intrinsic parameters are specific to a camera. They include information like focal length (\(f_x\), \(f_y\)) and optical centers (\(c_x\), \(c_y\)). The focal length and optical centers can be used to create a camera matrix, which can be used to remove distortion due to the lenses of a specific camera. The camera matrix is unique to a specific camera, so once calculated, it can be reused on other images taken by the same camera. It is expressed as a \(3\times 3\) matrix:</p>
+<p>
+<script type="math/tex; mode=display">camera \; matrix = \left [ \begin{matrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{matrix} \right ]</script>
+</p>
+<p>Extrinsic parameters corresponds to rotation and translation vectors which translates a coordinates of a 3D point to a coordinate system.</p>
+<h4 id="24-references">2.4 References</h4>
+<ul>
+<li>[1] <strong>BRADSKI, G.</strong> <em>The OpenCV Library</em>, Dr. Dobb’s Journal of Software Tools, 2000.</li>
+<li>[2] <strong>BURGER, W., BURGE, M. J.</strong> <em>Principles of digital image processing. 1: Fundamental techniques</em>. London, Springer, 2009.</li>
+<li>[3] <strong>NATIONAL INSTRUMENTS.</strong> <em>IMAQ: Vision Concepts Manual</em>. Austin, Texas, 2003.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../01_B01/" class="btn btn-neutral float-left" title="Bloco 01 - Basic Concepts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../01_B01/" class="btn btn-neutral float-left" title="Unit 01 - Basic Concepts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
