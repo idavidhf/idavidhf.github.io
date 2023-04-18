@@ -50,46 +50,6 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Unit 01 - Basic Concepts</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#11-definition-of-a-digital-image">1.1 Definition of a Digital Image</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#12-properties-of-a-digitized-image">1.2 Properties of a Digitized Image</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#121-image-resolution">1.2.1 Image Resolution</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#122-image-definition">1.2.2 Image Definition</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#123-number-of-planes">1.2.3 Number of Planes</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#13-image-types">1.3 Image Types</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#131-grayscale-images">1.3.1 Grayscale Images</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#132-color-images">1.3.2 Color Images</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#133-complex-images">1.3.3 Complex Images</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#14-image-files">1.4 Image Files</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#15-color-spaces">1.5 Color Spaces</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#151-concepts">1.5.1 Concepts</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#152-the-rgb-color-space">1.5.2 The RGB Color Space</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#153-hsl-color-space">1.5.3 HSL Color Space</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#154-cie-lab-color-space">1.5.4 CIE L*a*b* Color Space</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#155-cmy-color-space">1.5.5 CMY Color Space</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#156-yiq-color-space">1.5.6 YIQ Color Space</a>
-    </li>
-        </ul>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../02_B02/">Unit 02 - Image Aquisition</a>
@@ -120,99 +80,11 @@
             <div class="section" itemprop="articleBody">
               
                 <h3 id="1-basics-of-images">1 BASICS OF IMAGES</h3>
-<h4 id="11-definition-of-a-digital-image">1.1 Definition of a Digital Image</h4>
-<p>An image is a two-dimensional array of values representing light intensity. For the purposes of image processing, the term image refers to a digital image. An image is a function of the light intensity:</p>
-<p>
-<script type="math/tex; mode=display">f(x, y)</script>
-</p>
-<p>where <script type="math/tex">f</script> is the brightness of the point \((x, y\)), and <script type="math/tex">x</script> and <script type="math/tex">y</script> represent the spatial coordinates of a picture element (abbreviated pixel).</p>
-<p>By convention, the spatial reference of the pixel with the coordinates (0, 0) is located at the top, left corner of the image. Notice in Figure 1-1 that the value of x increases moving from left to right, and the value of y increases from top to bottom.</p>
-<p><img alt="&quot;Figure 1-1&quot;" src="https://dsm01pap005files.storage.live.com/y4mXlJDaOYXOaGO12Y3-45yQqMpz_c57jupJH7AHr1U7V7yzHffLFwgfDYqRY0yny2ScOpsVorY7pBR92I_2SqwiCrJCRP8n_MLSC9ixB4SYpjVFc7HjAGmHW1up2pGved8BB2SqfCZdyMFiCNB6p41MJkhRJT6ZEc1QiCV8DINmwgay3Aq7siFee2_HVRQi6vv?width=660&amp;height=144&amp;cropmode=none" title="Spatial Reference of the (0, 0) Pixel" />
-<strong>Figure 1-1</strong>. Spatial Reference of the (0, 0) Pixel.</p>
-<p>In digital image processing, an imaging sensor converts an image into a discrete number of pixels. The imaging sensor assigns to each pixel a numeric location and a gray level or color value that specifies the brightness or color of the pixel.</p>
-<h4 id="12-properties-of-a-digitized-image">1.2 Properties of a Digitized Image</h4>
-<p>A digitized image has three basic properties: <strong>resolution</strong>, <strong>definition</strong>, and <strong>number of planes</strong>.</p>
-<h5 id="121-image-resolution">1.2.1 Image Resolution</h5>
-<p>The <em>spatial resolution</em> of an image is its number of rows and columns of pixels. An image composed of m columns and n rows has a resolution of \(m\times n\). This image has m pixels along its horizontal axis and n pixels along its vertical axis.</p>
-<h5 id="122-image-definition">1.2.2 Image Definition</h5>
-<p>The <em>definition</em> of an image indicates the number of shades that you can see in the image. The bit depth of an image is the number of bits used to encode the value of a pixel. For a given bit depth of \(n\), the image has an image definition of \(2^n\), meaning a pixel can have \(2^n\) different values. For example, if \(n\) equals 8-bits, a pixel can take 256 different values ranging from
-0 to 255. If \(n\) equals 16 bits, a pixel can take 65,536 different values ranging from 0 to 65,535 or from –32,768 to 32,767.</p>
-<p>The manner in which you encode your image depends on the nature of the image acquisition device, the type of image processing you need to use, and the type of analysis you need to perform. For example, 8-bit encoding is sufficient if you need to obtain the shape information of objects in an image. However, if you need to precisely measure the light intensity of an image or region in an image, you must use 16-bit or floating-point encoding.</p>
 <blockquote>
-<p><strong>TIP:</strong> <em>Use color encoded images when your machine vision or image processing application depends on the color content of the objects you are inspecting or analyzing.</em></p>
+<p><strong>O CONTEÚDO DESTE BLOCO ESTARÁ INDISPONÍVEL DURANTE O PERÍODO DA PROVA.</strong></p>
+<p><strong>THE CONTENT OF THIS BLOCK WILL BE UNAVAILABLE DURING THE EXAM PERIOD.</strong></p>
+<p><strong>EL CONTENIDO DE ESTE BLOQUE ESTARE INDISPONIBLE DURANTE EL PERIODO DE LA PRUEBA.</strong></p>
 </blockquote>
-<h5 id="123-number-of-planes">1.2.3 Number of Planes</h5>
-<p>The number of planes in an image corresponds to the number of arrays of pixels that compose the image. A grayscale or pseudo-color image is composed of one plane, while a true-color image is composed of three planes—one each for the red component, blue component, and green component.</p>
-<p>In true-color images, the color component intensities of a pixel are coded into three different values. The color image is the combination of three arrays of pixels corresponding to the <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> components in an RGB image. HSL images are defined by their <strong>hue</strong>, <strong>saturation</strong>, and <strong>luminance</strong> values.</p>
-<h4 id="13-image-types">1.3 Image Types</h4>
-<p>We can talk about three main types of images: <strong>grayscale, color, and complex images</strong>.</p>
-<h5 id="131-grayscale-images">1.3.1 Grayscale Images</h5>
-<p>A <em>grayscale image</em> is composed of a single plane of pixels. Each pixel is encoded using one of the following single numbers:</p>
-<ul>
-<li>An 8-bit unsigned integer representing grayscale values between 0 and 255.</li>
-<li>A 16-bit signed integer representing grayscale values between –32,768 and +32,767.</li>
-<li>A single precision floating point number (encoded using four bytes) representing grayscale values ranging from \(-\infty\) to \(+\infty\).</li>
-</ul>
-<h5 id="132-color-images">1.3.2 Color Images</h5>
-<p>A <em>color image</em> is encoded in memory as either an RGB or HSL image. Color image pixels are a composite of four values. RGB images store color information using 8 bits each for the <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> planes. HSL images store color information using 8 bits each for <strong>hue</strong>, <strong>saturation</strong>, and <strong>luminance</strong>. In all of the color models, an additional 8-bit value goes unused. This representation is known as 4\(\times\)8-bit or 32-bit encoding.</p>
-<h5 id="133-complex-images">1.3.3 Complex Images</h5>
-<p>A <em>complex image</em> contains the frequency information of a grayscale image. Create a complex image by applying a Fast Fourier transform (FFT) to a grayscale image. When you transform a grayscale image into a complex image, you can perform frequency domain operations on the image.</p>
-<p>Each pixel in a complex image is encoded as two single-precision floating-point values, which represent the real and imaginary components of the complex pixel. You can extract the following four components from a complex image: <strong>the real part</strong>, <strong>imaginary part</strong>, <strong>magnitude</strong>, and <strong>phase</strong>.</p>
-<h4 id="14-image-files">1.4 Image Files</h4>
-<p>An image file is composed of a header followed by pixel values. Depending on the file format, the header contains image information about the horizontal and vertical resolution, pixel definition, and the original palette. Image files may also store information about calibration, pattern matching templates, and overlays. The following are common image file formats:</p>
-<ul>
-<li>Bitmap (<strong>BMP</strong>)</li>
-<li>Tagged image file format (<strong>TIFF</strong>).</li>
-<li>Portable network graphics (<strong>PNG</strong>): Offers the capability of storing image information about spatial calibration, pattern matching templates, and overlays.</li>
-<li>Joint Photographic Experts Group format (<strong>JPEG</strong>).</li>
-<li>National Instruments image file format (<strong>AIPD</strong>): Used for saving floating-point, complex, and HSL images.</li>
-</ul>
-<p>Standard formats for 8-bit grayscale and RGB color images are BMP, TIFF, PNG, JPEG, and AIPD. Standard formats for 16-bit grayscale and complex images are PNG and AIPD.</p>
-<h4 id="15-color-spaces">1.5 Color Spaces</h4>
-<p>Color spaces allow you to represent a color. A color space is a subspace within a three-dimensional coordinate system where each color is represented by a point. You can use color spaces to facilitate the description of colors between persons, machines, or software programs.</p>
-<p>Various industries and applications use a number of different color spaces. Humans perceive color according to parameters such as brightness, hue, and intensity, while computers perceive color as a combination of red, green, and blue. The printing industry uses cyan, magenta, and yellow
-to specify color. The following is a list of common color spaces.</p>
-<ul>
-<li><strong>RGB:</strong> Based on red, green, and blue. Used by computers to display images.</li>
-<li><strong>HSL:</strong> Based on hue, saturation, and luminance. Used in image processing applications.</li>
-<li><strong>CIE:</strong> Based on brightness, hue, and colorfulness. Defined by the Commission Internationale de l’Eclairage (International Commission on Illumination) as the different sensations of color that the human brain perceives.</li>
-<li><strong>CMY:</strong> Based on cyan, magenta, and yellow. Used by the printing industry.</li>
-<li><strong>YIQ:</strong> Separates the luminance information (Y) from the color information (I and Q). Used for TV broadcasting.</li>
-</ul>
-<blockquote>
-<p><strong>When to Use:</strong></p>
-<blockquote>
-<p><em>You must define a color space every time you process color images. If you expect the lighting conditions to vary considerably during your color machine vision application, use the HSL color space. The HSL color space provides more accurate color information than the RGB space when running color processing functions, such as color matching, color location, and color pattern matching.</em></p>
-<p><em>If you do not expect the lighting conditions to vary considerably during your application, and you can easily define the colors you are looking for using red, green, and blue, use the RGB space. Also, use the RGB space if you want only to display color images, but not process them, in your application. The RGB space reproduces an image as you would expect to see it.</em></p>
-</blockquote>
-</blockquote>
-<h5 id="151-concepts">1.5.1 Concepts</h5>
-<p>Because color is the brain’s reaction to a specific visual stimulus, color is best described by the different sensations of color that the human brain perceives. The color-sensitive cells in the eye’s retina sample color using three bands that correspond to red, green, and blue light. The signals from these cells travel to the brain where they combine to produce different sensations of colors. The Commission Internationale de l’Eclairage has defined the following sensations:</p>
-<ul>
-<li><strong>Brightness:</strong> The sensation of an area exhibiting more or less light</li>
-<li><strong>Hue:</strong> The sensation of an area appearing similar to a combination of red, green, and blue</li>
-<li><strong>Colorfulness:</strong> The sensation of an area appearing to exhibit more or less of its hue</li>
-<li><strong>Lightness:</strong> The sensation of an area’s brightness relative to a reference white in the scene</li>
-<li><strong>Chroma:</strong> The colorfulness of an area with respect to a reference white in the scene</li>
-<li><strong>Saturation:</strong> The colorfulness of an area relative to its brightness</li>
-</ul>
-<p>The <strong>trichromatic theory</strong> describes how three separate lights (red, green, and blue) can be combined to match any visible color. This theory is based on the three color sensors that the eye uses. Printing and photography use the trichromatic theory as the basis for combining three different colored dyes to reproduce colors in a scene. Computer color spaces also use three parameters to define a color.</p>
-<p>Most color spaces are geared toward displaying images with hardware, such as color monitors and printers, or toward applications that manipulate color information, such as computer graphics and image processing. Color CRT monitors, major of color video cameras, and most computer graphics systems use the RGB color space. The <strong>HSL</strong> space, combined with <strong>RGB</strong> and <strong>YIQ</strong>, is frequently used in applications that manipulate color, such as image processing. The color picture publishing industry uses the CMY color space, also known as <strong>CMYK</strong>. The <strong>YIQ</strong> space is the standard for color TV broadcast.</p>
-<h5 id="152-the-rgb-color-space">1.5.2 The RGB Color Space</h5>
-<p>The RGB color space is the most commonly used color space. The human eye receives color information in separate <strong>red</strong>, <strong>green</strong>, and <strong>blue</strong> components through cones, the color receptors present in the human eye. These three colors are known as additive primary colors. In an additive color system, the human brain processes the three primary light sources and combines them to compose a single color <strong>image</strong>. The three primary color components can combine to reproduce almost all other possible colors.</p>
-<p>You can visualize the RGB space as a 3-dimensional cube with red, green, and blue at the corners of each axis, as shown in Figure 1.5-1. Black is at the origin, while white is at the opposite corner of the cube. Each side of the cube has a value between 0 and 1. Along each axis of the RGB cube, the colors range from no contribution of that component to a fully saturated color. Any point, or color, within the cube is specified by three numbers: an <strong>R</strong>, <strong>G</strong>, <strong>B</strong> triple. The diagonal line of the cube from black \((0, 0, 0)\) to white \((1, 1, 1\)) represents all the grayscale values or where all of the red, green, and blue components are equal. Different computer hardware and software combinations use different ranges for the colors. Common combinations are 0–255 and 0–65,535 for each component. To map color values within these ranges to values in the RGB cube, divide the color values by the maximum value that the range can take.</p>
-<p><img alt="&quot;RGB&quot;" src="https://dsm01pap005files.storage.live.com/y4m8KZpsxjrtlhMUVM4UVUzB0beyom9J2ovzRirjYJWEDu99sMqFspePWzaItPikv4Ymva7oipzQ6ZggZDhmLnvYBAmFeyzL665zTayNz7_k5ewQ06Q9Z9EjE_b2DZQu8WjMrgnTWDHU413VxP5oNs4M45WpiXiZ-fA6jgqF2eznXMn9vOTmkx_cDaWPsZXkgzl?width=660&amp;height=639&amp;cropmode=none" title="RGB Cube" /></p>
-<p><strong>Figure 1.5-1.</strong> RGB Cube.</p>
-<p>The RGB color space lies within the perceptual space of humans. In other words, the RGB cube represents fewer colors than we can see.</p>
-<p>The RGB space simplifies the design of computer monitors, but it is not ideal for all applications. In the RGB color space, the red, green, and blue color components are all necessary to describe a color. Therefore, RGB is not as intuitive as other color spaces. The HSL color space describes color using only the hue component, which makes HSL the best choice for many image processing applications, such as color matching.</p>
-<h5 id="153-hsl-color-space">1.5.3 HSL Color Space</h5>
-<p><strong>The HSL color space was developed to put color in terms that are easy for humans to quantify</strong>. <strong>H</strong>ue, <strong>S</strong>aturation, and <strong>L</strong>ightness are characteristics that distinguish one color from another in the HSL space. <strong>Hue</strong> corresponds to the dominant wavelength of the color. The hue component is a color, such as orange, green, or violet. You can visualize the range of hues as a rainbow. <strong>Saturation</strong> refers to the amount of white added to the hue and represents the relative purity of a color. A color without any white is fully saturated. The degree of saturation is inversely proportional to the amount of white light added. Colors such as pink (red and white) and lavender (purple and white) are less saturated than red and purple. <strong>Lightness</strong> embodies the chromatic notion of luminance, or the amplitude or power of light. <strong>Chromaticity</strong> is the combination of hue and saturation, and the relationship between chromacity and lightness characterizes a color. Systems that manipulate hue use the HSL color space, which also can be written as HSB (Hue, Saturation, and Brightness) or HSV (Hue, Saturation, and Value).</p>
-<h5 id="154-cie-lab-color-space">1.5.4 CIE L*a*b* Color Space</h5>
-<p><strong>CIE 1976 L*a*b*</strong>, one of the CIE-based color spaces, is a way to linearize the perceptibility of color differences. The nonlinear relations for <strong>L*</strong>, <strong>a*</strong>, and <strong>b*</strong> mimic the logarithmic response of the eye.</p>
-<h5 id="155-cmy-color-space">1.5.5 CMY Color Space</h5>
-<p><strong>CMY</strong> is another set of familiar primary colors: cyan, magenta, and yellow. <strong>CMY</strong> is a subtractive color space in which these primary colors are subtracted from white light to produce the desired color. The <strong>CMY</strong> color space is the basis of most color printing and photography processes. <strong>CMY</strong> is the complement of the RGB color space because <em>cyan, magenta, and yellow</em> are the complements of <em>red, green, and blue</em>.</p>
-<h5 id="156-yiq-color-space">1.5.6 YIQ Color Space</h5>
-<p>The YIQ space is the primary color space adopted by the National Television System Committee (NTSC) for color TV broadcasting. It is a linear transformation of the RGB cube for transmission efficiency and for maintaining compatibility with monochrome television standards. The Y component of the YIQ system provides all the video information that a monochrome television set requires. The main advantage of the YIQ space for image processing is that the luminance information (Y) is decoupled from the color information (I and Q). Because luminance is proportional to the amount of light perceived by the eye, modifications to the grayscale appearance of the image do not affect the color information.</p>
               
             </div>
           </div><footer>
