@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Class Syllabus";
-        var mkdocs_page_input_path = "COV 816/ementa.md";
+        var mkdocs_page_input_path = "COV 816\\ementa.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -22,6 +22,8 @@
       <script src="../../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/java.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
@@ -115,7 +117,7 @@
               
                 <h3 id="ementa-da-disciplina">EMENTA DA DISCIPLINA</h3>
 <blockquote>
-<p>COV 816 - PROCESSAMENTO DE IMAGENS (PROGRAMA DE ENGª OCEÂNICA - 2023/1)</p>
+<p><strong>COV 816 - PROCESSAMENTO DE IMAGENS (PROGRAMA DE ENGª OCEÂNICA - 2023/1)</strong></p>
 </blockquote>
 <h4 id="identificacao">Identificação</h4>
 <table>
@@ -164,60 +166,86 @@
 </ul>
 <p><strong>ESPECÍFICO:</strong></p>
 <blockquote>
-<p>Ao final do curso, os estudantes devem ser capazes de projetar e implementar operadores e processamentos diversos sobre imagens digitais de diversas modalidades e protocolos em problemas de estudo da Engenharia Naval e Oceânica.</p>
+<p><strong>Ao final do curso, os estudantes devem ser capazes de projetar e implementar operadores e processamentos diversos sobre imagens digitais de diversas modalidades e protocolos em problemas de estudo da Engenharia Naval e Oceânica.</strong></p>
 </blockquote>
 <h4 id="metodologia">Metodologia</h4>
 <p>A disciplina está dividida em cinco blocos, cujos conteúdos serão ministrados com base em um plano particular de trabalho, e duas avaliações. Os blocos com seus conteúdos e planos de trabalho, e os pontos de avaliação, são discriminados na tabela a seguir: </p>
+<hr />
 <h5 id="bloco-1-conceitos-basicos-4-aulas">Bloco 1 - Conceitos básicos (4 aulas)</h5>
-<p><strong>CONTEÚDO:</strong>
-- <strong>Definição da Imagem Digital:</strong> Conceito geral da imagem digital e suas propriedades principais
-- <strong>Tipos de Imagens e Arquivos de Imagem:</strong> Imagens em tons de cinza, imagens a cor, e imagens complexas.
-- <strong>Espaços de cor:</strong> Apresentação dos principais espaços de cor usados nas imagens digitais (RGB, HSL, CIE-Lab).
-- Apresentação do conteúdo do curso.</p>
-<p><strong>PLANO DE TRABALHO:</strong>
-- Aplicação ao vivo dos conceitos no software ImageJ/FIJI.
-- Estudo da técnica de fotoluminescência.
-- Operações de cor e pseudo-cor nas imagens.
-- Melhora digital das imagens.</p>
+<p><strong>CONTEÚDO:</strong></p>
+<ul>
+<li><strong>Definição da Imagem Digital:</strong> Conceito geral da imagem digital e suas propriedades principais</li>
+<li><strong>Tipos de Imagens e Arquivos de Imagem:</strong> Imagens em tons de cinza, imagens a cor, e imagens complexas.</li>
+<li><strong>Espaços de cor:</strong> Apresentação dos principais espaços de cor usados nas imagens digitais (RGB, HSL, CIE-Lab).</li>
+<li>Apresentação do conteúdo do curso.</li>
+</ul>
+<p><strong>PLANO DE TRABALHO:</strong></p>
+<ul>
+<li>Aplicação ao vivo dos conceitos no software ImageJ/FIJI.</li>
+<li>Estudo da técnica de fotoluminescência.</li>
+<li>Operações de cor e pseudo-cor nas imagens.</li>
+<li>Melhora digital das imagens.</li>
+</ul>
+<hr />
 <h5 id="bloco-2-aquisicao-de-imagens-4-aulas">Bloco 2 - Aquisição de imagens (4 aulas)</h5>
-<p><strong>CONTEÚDO:</strong>
-- <strong>Aquisição de imagens:</strong> Conceitos de Resolução, Contraste, Profundidade de Campo, Perspectiva, Distorção.
-- <strong>Calibração Espacial:</strong> Processo de Calibração, Sistema de Coordenadas, Algoritmos de Calibração, Correções de Imagem. </p>
-<p><strong>PLANO DE TRABALHO:</strong>
-- Aquisição de imagens com webcam.
-- Aquisição de imagens com câmeras de uso industrial/científico.
-- Rectificação de imagens.
-- Correlação de unidades de imagem e do mundo real.
-- Protocolos de calibração. </p>
+<p><strong>CONTEÚDO:</strong></p>
+<ul>
+<li><strong>Aquisição de imagens:</strong> Conceitos de Resolução, Contraste, Profundidade de Campo, Perspectiva, Distorção.</li>
+<li><strong>Calibração Espacial:</strong> Processo de Calibração, Sistema de Coordenadas, Algoritmos de Calibração, Correções de Imagem. </li>
+</ul>
+<p><strong>PLANO DE TRABALHO:</strong></p>
+<ul>
+<li>Aquisição de imagens com webcam.</li>
+<li>Aquisição de imagens com câmeras de uso industrial/científico.</li>
+<li>Rectificação de imagens.</li>
+<li>Correlação de unidades de imagem e do mundo real.</li>
+<li>Protocolos de calibração. </li>
+</ul>
 <blockquote>
 <p><strong>EXAME PARCIAL (B1 - B2)</strong></p>
 </blockquote>
+<hr />
 <h5 id="bloco-3-analise-e-processamento-de-imagens-6-aulas">Bloco 3 -  Análise e processamento de imagens (6 aulas)</h5>
-<p><strong>CONTEÚDO:</strong>
-Análise de imagens: Histograma, Linha de Perfil, Medidas de Intensidade.
-Processamento de imagens: LUT, Convolução, Filtros Espaciais, Binarização, Morfologia de Imagens Binárias, Detecção de Bordas.</p>
-<p><strong>PLANO DE TRABALHO:</strong>
-Filtragem das imagens retificadas no Bloco 2.
-Medição de partículas e elementos da imagem.
-Programação de Macros.
-Automação do processamento e filtragem dos elementos da imagem digital. </p>
+<p><strong>CONTEÚDO:</strong></p>
+<ul>
+<li>Análise de imagens: Histograma, Linha de Perfil, Medidas de Intensidade.</li>
+<li>Processamento de imagens: LUT, Convolução, Filtros Espaciais, Binarização, Morfologia de Imagens Binárias, Detecção de Bordas.</li>
+</ul>
+<p><strong>PLANO DE TRABALHO:</strong></p>
+<ul>
+<li>Filtragem das imagens retificadas no Bloco 2.</li>
+<li>Medição de partículas e elementos da imagem.</li>
+<li>Programação de Macros.</li>
+<li>Automação do processamento e filtragem dos elementos da imagem digital. </li>
+</ul>
+<hr />
 <h5 id="bloco-4-metrologia-por-imagens-6-aulas">Bloco 4 - Metrologia por imagens (6 aulas)</h5>
-<p><strong>CONTEÚDO:</strong>
-Medição em imagens: Medição de regiões, medição de partículas.
-Segmentação e Classificação: Técnicas de segmentação de objetos e classificação de partículas, automação do processo de medição/classificação.</p>
-<p><strong>PLANO DE TRABALHO:</strong>
-Filtragem das imagens retificadas no Bloco 2.
-Medição de partículas e elementos da imagem.
-Programação de Macros.
-Automação do processamento e filtragem dos elementos da imagem digital. </p>
+<p><strong>CONTEÚDO:</strong></p>
+<ul>
+<li>Medição em imagens: Medição de regiões, medição de partículas.</li>
+<li>Segmentação e Classificação: Técnicas de segmentação de objetos e classificação de partículas, automação do processo de medição/classificação.</li>
+</ul>
+<p><strong>PLANO DE TRABALHO:</strong></p>
+<ul>
+<li>Filtragem das imagens retificadas no Bloco 2.</li>
+<li>Medição de partículas e elementos da imagem.</li>
+<li>Programação de Macros.</li>
+<li>Automação do processamento e filtragem dos elementos da imagem digital. </li>
+</ul>
+<hr />
 <h5 id="bloco-5-apresentacoes-de-projetos-por-equipe-2-aulas">Bloco 5 - Apresentações de Projetos por Equipe (2 aulas)</h5>
-<p><strong>CONTEÚDO:</strong>
-Discussão geral e resolução de dúvidas gerais do curso.</p>
-<p><strong>PLANO DE TRABALHO:</strong>
-Equipes apresentam projeto de processamento de imagens aplicado a problemas de relevância da área de estudo. </p>
+<p><strong>CONTEÚDO:</strong></p>
+<ul>
+<li>Discussão geral e resolução de dúvidas gerais do curso.</li>
+</ul>
+<p><strong>PLANO DE TRABALHO:</strong></p>
+<ul>
+<li>Equipes apresentam projeto de processamento de imagens aplicado a problemas de relevância da área de estudo. </li>
+</ul>
 <blockquote>
 <p><strong>EXAME FINAL (B3 - B4)</strong></p>
 </blockquote>
+<hr />
 <h4 id="ementa">Ementa</h4>
 <table>
 <thead>
