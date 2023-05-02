@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Unit 02 - Image Aquisition";
-        var mkdocs_page_input_path = "COV 816/02_B02.md";
+        var mkdocs_page_input_path = "COV 816\\02_B02.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -22,6 +22,8 @@
       <script src="../../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/java.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
@@ -182,11 +184,11 @@
 </p>
 <p>In short, we need to find five parameters, known as distortion coefficients given by:</p>
 <p>
-<script type="math/tex; mode=display">Distortion \; coefficients=(k_1 \hspace{10pt} k_2 \hspace{10pt} p_1 \hspace{10pt} p_2 \hspace{10pt} k_3)</script>
+<script type="math/tex; mode=display">\text{Distortion coefficients}=(k_1 \hspace{10pt} k_2 \hspace{10pt} p_1 \hspace{10pt} p_2 \hspace{10pt} k_3)</script>
 </p>
 <p>In addition to this, we need to some other information, like the intrinsic and extrinsic parameters of the camera. Intrinsic parameters are specific to a camera. They include information like focal length (\(f_x\), \(f_y\)) and optical centers (\(c_x\), \(c_y\)). The focal length and optical centers can be used to create a camera matrix, which can be used to remove distortion due to the lenses of a specific camera. The camera matrix is unique to a specific camera, so once calculated, it can be reused on other images taken by the same camera. It is expressed as a \(3\times 3\) matrix:</p>
 <p>
-<script type="math/tex; mode=display">camera \; matrix = \left [ \begin{matrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{matrix} \right ]</script>
+<script type="math/tex; mode=display">\text{Camera matrix} = \left [ \begin{matrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{matrix} \right ]</script>
 </p>
 <p>Extrinsic parameters corresponds to rotation and translation vectors which translates a coordinates of a 3D point to a coordinate system.</p>
 <h4 id="24-references">2.4 References</h4>
