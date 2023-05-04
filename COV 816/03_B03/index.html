@@ -56,6 +56,20 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Unit 03 - Image Analysis and Processing</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#histogram">Histogram</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use">When to Use?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#histogram-concepts">Histogram Concepts</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#linear-histogram">Linear Histogram</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cumulative-histogram">Cumulative Histogram</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -84,7 +98,54 @@
             <div class="section" itemprop="articleBody">
               
                 <h3 id="3-image-analysis-and-processing">3 IMAGE ANALYSIS AND PROCESSING</h3>
-<p>[TEXT TO BE INCLUDED HERE]</p>
+<p>This chapter contains information about histograms, line profiles, and intensity measurements.</p>
+<p>Image analysis combines techniques that compute statistics and measurements based on the gray-level intensities of the image pixels. You can use the image analysis functions to understand the content of the image and to decide which type of inspection tools to use to solve your application. Image analysis functions also provide measurements that you can use to perform basic inspection tasks such as presence or absence verification.</p>
+<h4 id="histogram">Histogram</h4>
+<p>A histogram counts and graphs the total number of pixels at each grayscale level. From the graph, you can tell whether the image contains distinct regions of a certain gray-level value.</p>
+<p>A histogram provides a general description of the appearance of an image and helps identify various components such as the background, objects, and noise.</p>
+<h5 id="when-to-use">When to Use?</h5>
+<p>The histogram is a fundamental image analysis tool that describes the distribution of the pixel intensities in an image. Use the histogram to determine if the overall intensity in the image is high enough for your inspection task. You can use the histogram to determine whether an image contains distinct regions of certain grayscale values. You can also use a histogram to tune the image acquisition conditions.</p>
+<p>You can detect two important criteria by looking at the histogram:</p>
+<ul>
+<li><strong>Saturation</strong> — Too little light in the imaging environment leads to underexposure of the imaging sensor, while too much light causes overexposure, or saturation, of the imaging sensor. Images acquired under underexposed or saturated conditions will not contain all the information that you want to inspect from the scene being observed. It is important to detect these imaging conditions and correct for them during setup of your imaging system. You can detect whether a sensor is underexposed or saturated by looking at the histogram. An underexposed image contains a large number of pixels with low gray-level values. This appears as a peak at the lower end of the histogram. An overexposed or saturated image contains a large number of pixels with very high gray-level values. This condition is represented by a peak at the upper end of the histogram, as shown in Figure #1.</li>
+<li><strong>Lack of contrast</strong> — A widely-used type of imaging application involves inspecting and measuring (counting) parts of interest in a scene. A strategy to separate the objects from the background relies on a difference in the intensities of both, for example, a bright part and a darker background. In this case, the analysis of the histogram of the image reveals two or more well-separated intensity populations, as shown in Figure #2. Tune your imaging setup until the histogram of your acquired images has the contrast required by your application.</li>
+</ul>
+<h5 id="histogram-concepts">Histogram Concepts</h5>
+<p>The histogram is the function H defined on the grayscale range
+[0, …, k, …, 255] such that the number of pixels equal to the gray-level value k is</p>
+<p>
+<script type="math/tex; mode=display">H(k)=nk</script>
+</p>
+<p>where \(k\) is the gray-level value, \(n_k\) is the number of pixels in an image with a gray-level value equal to \(k\), and
+\(k\,n_k = n\) nk = n is the total number of pixels in an image.</p>
+<p>The following histogram plot reveals which gray levels occur frequently and which occur rarely.
+[FIGURE #1]</p>
+<p>Two types of histograms can be calculated: <strong>the linear</strong> and <strong>cumulative</strong> histograms.</p>
+<p>In both cases, the horizontal axis represents the gray-level value that ranges from 0 to 255. For a gray-level value k, the vertical axis of the linear histogram indicates the number of pixels \(n_k\) set to the value \(k\), and the vertical axis of the cumulative histogram indicates the percentage of pixels set to a value less than or equal to \(k\).</p>
+<h6 id="linear-histogram">Linear Histogram</h6>
+<p>The density function is</p>
+<p>
+<script type="math/tex; mode=display">H_{Linear}\left(k\right) = {n_k}</script>
+</p>
+<p>where \(H_{Linear}(k)\) is the number of pixels equal to \(k\). The probability function is</p>
+<p>
+<script type="math/tex; mode=display">P_{Linear}\left(k\right) = \frac{n_k}{n}</script>
+</p>
+<p>where \(P_{Linear}(k)\) is the probability that a pixel is equal to \(k\).</p>
+<p>[FIGURE #2]
+Figure #2. Sample of a Linear Histogram</p>
+<h6 id="cumulative-histogram">Cumulative Histogram</h6>
+<p>The distribution function is</p>
+<p>
+<script type="math/tex; mode=display"> H_{cumul}\left(k\right)=\sum_{i=0}^{k}{n_i}</script>
+</p>
+<p>where \(H_{Cumul}(k)\) is the number of pixels that are less than or equal to \(k\).</p>
+<p>The probability function is</p>
+<p>
+<script type="math/tex; mode=display"> P_{cumul}\left(k\right)=\sum_{i=0}^{k}{\frac{n_i}{n}}</script>
+</p>
+<p>where \(P_{Cumul}(k)\) is the probability that a pixel is less than or equal to \(k\).</p>
+<p>[FIGURE #3]Sample of a Cumulative Histogram</p>
               
             </div>
           </div><footer>
